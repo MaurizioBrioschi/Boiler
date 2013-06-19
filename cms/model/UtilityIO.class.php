@@ -1,14 +1,17 @@
 <?php
 /**
- * classe che contiene alcune utility per le operazioni input/output
- * @version 1.2
+ * class for IO managment
+ * @author Maurizio Brioschi (maurizio.brioschi@ridesoft.org) 
+ * @version 0.1 
+ * 
  */
 class UtilityIO {
     /**
-     * remove directory
+     * remove directory content and directory if $removeDir is true
      * @param string $path 
+     * @param boolean $removeDir 
      */
-    public static function removeDirectory($path)  {
+    public static function removeDirectory($path,$removeDir=false)  {
         try{
              $objects = scandir($path);
              foreach ($objects as $object) {
@@ -20,16 +23,18 @@ class UtilityIO {
                           UtilityIO::removeFile($path."/".$object);
                    }
              } 
-             if(!@rmdir($path)){
-                 $errors= error_get_last();
-                 die($errors["message"]." at ".$errors["file"]." line ".$errors["line"]);
+             if($removeDir) {
+                if(!@rmdir($path)){
+                    $errors= error_get_last();
+                    die($errors["message"]." at ".$errors["file"]." line ".$errors["line"]);
+                }
              }
         }catch(IOException $e)  {
             die($e->getMessage());
         }
     }
     /**
-     * remove a file
+     * remove file
      * @param string $filepath 
      */
     public static function removeFile($filepath)  {
@@ -45,7 +50,7 @@ class UtilityIO {
         }
     }
     /**
-     * replace the oldstring with a new string in a file
+     * replace string in file
      * @param String $path
      * @param String $oldString
      * @param String $newString
@@ -95,7 +100,7 @@ class UtilityIO {
      }
     }
     /**
-     * Uploada un file in $path con nome $file_dest, passato in post attraverso $post_var 
+     * upload file in $path with  $file_dest name, posted thrown $post_var 
      * @param string $file
      * @param string $path
      * @param string $file_dest
@@ -125,5 +130,16 @@ class UtilityIO {
              
              
     }  
+    /**
+     * set permission to direc
+     * @param string $path
+     * @param int $mode
+     */
+    public static function chmod($path,$mode)   {
+        exec("chmod -Rf $mode $path");
+    }
+    
+    
 }
 ?>
+
