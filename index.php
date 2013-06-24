@@ -15,7 +15,7 @@
  define ('__SITE_PATH', $site_path);
 
  /*** include the init.php file ***/
- include 'cms/includes/init.php';
+ include 'includes/init.php';
 
  /*** load the router ***/
  $registry->router = new router($registry);

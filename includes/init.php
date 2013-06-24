@@ -41,8 +41,8 @@
  $registry->Authentication = new Authentication();
  
  /** variabili per path **/
- $registry->UrlSite = "http://boiler/";
- $registry->UrlSiteCMS = "http://boiler/cms/";
+ $registry->UrlSite = "http://localhost/boiler/";
+ $registry->UrlSiteCMS = "http://localhost/boiler/cms/";
  $registry->pathSite = $_SERVER['DOCUMENT_ROOT']."/boiler/";
  $registry->imgs = "imgs/";
  $registry->imgNews = $registry->imgs."news/";
@@ -54,7 +54,7 @@
  
  
  /** varibili conf */
- $registry->titleApplication = "Mobilitare"; //nome dell'applicazione
+ $registry->titleApplication = "Boiler"; //nome dell'applicazione
  $registry->logo = $registry->UrlSite.$registry->imgs."logo.gif"; // nome del file del logo
  $registry->gallery_thumb = "200";//dimensione della thumb per le foto della gallery
  $registry->gallery_picture = "400"; //ridimensionamento delle foto della gallery

@@ -9,22 +9,7 @@
 </head>
 
 <body>
-	
-	
-	
-<div class="l_login">
-	
-	
-	<div id="header">
-			<div class="log1"><a href="<?php print $this->registry->UrlSiteCMS; ?>" title="Torna alla Home"><img src="<?php print $this->registry->logo; ?>" alt="<?php print $this->registry->titleApplication; ?>" width="80px"  /></a></div>
-			<div class="log2"><img src="<?php print $this->registry->UrlSiteCMS.$this->registry->imgs."logo_mool.jpg"; ?>" alt="Mool" /></div>
-		</div>
-	
-	
-	
-	
-	<div id="main" class="l_main">
-		<div class="testo l_testo">
+
 			<form id="loginindex" name="login" method="post" action="<?php print $this->registry->UrlSiteCMS."index.php?rt=auth/login"; ?>">
 								
 				<div class="l_left">
@@ -46,12 +31,7 @@
 				</div>
 				<input type="submit" name="sub" id="sub" style="display: none" />
 			</form>
-		</div>
-	</div>
-	
-	
-</div>
-<div class="mozart" style="width: 666px"><a href="http://www.mozart.it/" title="Mozart" target="_blank"><img src="/falconara/cms/images/logo_mozart.gif" alt="Mozart" /></a></div>
+		
 
 
 </body>
