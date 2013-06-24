@@ -1,7 +1,7 @@
 <?php
 /**
  * Class router to analyze url and get the right controller with parameters
- * @author Maurizio Brioschi (maurizio.brioschi@ridesoft.org) 
+ *  @author Maurizio Brioschi (maurizio.brioschi@ridesoft.org) 
  * @version 0.1 
  */
 class router {
@@ -115,7 +115,10 @@ private function getController() {
 	else
 	{
 		if($parts[0]=='home') $this->controller='index';
-		else $this->controller = $parts[0];
+		else if($parts[0]=='')
+                    $this->controller = 'index';
+                else
+                    $this->controller = $parts[0];
                 if(count($parts)>1){
 		if(isset($parts[1]))
                     {
