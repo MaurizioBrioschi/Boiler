@@ -1,9 +1,8 @@
 <?php
 /**
- * Classe Composite del pattern Composite usato per istanziare i nodi, le pagine e i relativi componenti delle pagine
- * 
- * @subpackage compositePattern
- * @version 0.2
+ * Class composite
+ * @author Maurizio Brioschi (maurizio.brioschi@ridesoft.org) 
+ * @version 0.1 
  */
 class Composite implements iComponent {
     protected $children = array();

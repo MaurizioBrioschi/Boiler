@@ -1,9 +1,8 @@
 <?php
 /**
- * Questa classe memorizza tutte le variabili necessarie al funzionamento del sito
- * 
- * @subpackage application
- * @version 0.2
+ * This class store all variables useful for the web site
+ * @author Maurizio Brioschi (maurizio.brioschi@ridesoft.org) 
+ * @version 0.1 
  */
 Class Registry {
 
@@ -15,21 +14,20 @@ Class Registry {
 
 
  /**
- * imposta una variabile
- * @param string $index
- * @param mixed $value
- * @return void
- */
+  * set a variable
+  * @param String $index
+  * @param type $value
+  */
  public function __set($index, $value)
  {
 	$this->vars[$index] = $value;
  }
 
  /**
- * ottiene una variabile
- * @param mixed $index
- * @return mixed
- */
+  * get a variable
+  * @param type $index
+  * @return type
+  */
  public function __get($index)
  {
 	return $this->vars[$index];

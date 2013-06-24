@@ -1,11 +1,9 @@
 <?php
-
-
-
 /**
- * Classe per autenticazione AdminUser
- * @todo serializzare l'oggetto
- * @version 0.2
+ * Class for authentication
+ * @todo serialize object, to fixed
+ * @author Maurizio Brioschi (maurizio.brioschi@ridesoft.org) 
+ * @version 0.1 
  */
 class Authentication {
     var $errorCode = "AUTH_NONE";

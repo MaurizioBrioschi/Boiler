@@ -1,8 +1,8 @@
 <?php
 /**
- * Classe per il template del sito
- * Parte del View dell'MVC
- * @version 0.2
+ * Class for template rendering
+ * @author Maurizio Brioschi (maurizio.brioschi@ridesoft.org) 
+ * @version 0.1 
  */
 Class Template {
 

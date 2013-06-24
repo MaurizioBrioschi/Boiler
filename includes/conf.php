@@ -1,10 +1,13 @@
 <?php
-	//parametri per la connessione al server
+   /**
+    * Database parameters
+    */
    $SERVER = "localhost";
    $USER = "root";
    $PWD = "mauri";
    $DATABASE = "boiler";
-
+    
+   date_default_timezone_set('Europe/Dublin');
 	
         
 ?>

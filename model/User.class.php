@@ -1,5 +1,9 @@
 <?php
-
+/*
+ * @author Maurizio Brioschi (maurizio.brioschi@ridesoft.org) 
+ * @version 0.1 
+ * 
+ */
 class User extends UserAbstract{
     protected $whishlist;
     protected $isLogged = false;

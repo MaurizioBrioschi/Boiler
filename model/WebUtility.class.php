@@ -1,7 +1,8 @@
 <?php
 /*
- * Fornisce una serie di utility per la creazione delle pagine web 
- * @version 0.2
+ * Some utility for web pages
+ * @author Maurizio Brioschi (maurizio.brioschi@ridesoft.org) 
+ * @version 0.1 
  */
 
 class WebUtility {

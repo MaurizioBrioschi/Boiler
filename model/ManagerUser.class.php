@@ -1,9 +1,9 @@
 <?php
 
 /**
- * Rapprenta gli utenti che accedono al backend 
- * @todo serializzare l'oggetto
- * @version 0.2
+ * Class for backend users
+ * @author Maurizio Brioschi (maurizio.brioschi@ridesoft.org) 
+ * @version 0.1 
  */
 class ManagerUser{
       private $IDUser;

@@ -1,9 +1,8 @@
 <?php
 /*
- * Classe base per la creazione del pattern Composite, usato per istanziare i nodi, le pagine e i relativi componenti delle pagine
- * 
- * @subpackage compositePattern
- * @version 0.2
+ * interface for a component web page
+ * @author Maurizio Brioschi (maurizio.brioschi@ridesoft.org) 
+ * @version 0.1 
  */
 interface iComponent {
     /**

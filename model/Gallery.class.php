@@ -1,9 +1,8 @@
 <?php
 /**
- * Classe Gallery 
- * 
- * @subpackage compositePattern
- * @version 0.2
+ * Class Gallery 
+ * @author Maurizio Brioschi (maurizio.brioschi@ridesoft.org) 
+ * @version 0.1 
  */
 class Gallery extends Composite {
     protected $attr = array();

@@ -36,7 +36,7 @@
  $conn = new MySqlConnection($SERVER,$USER,$PWD,$DATABASE);
  $registry->MySqlConnection = $conn;
  
- date_default_timezone_set('Europe/Dublin');
+ 
 
  $registry->Authentication = new Authentication();
  

@@ -1,6 +1,8 @@
 <?php
 /**
- * @version 0.2
+ * class for photo utility
+ * @author Maurizio Brioschi (maurizio.brioschi@ridesoft.org) 
+ * @version 0.1 
  */
 class PhotoUtility{
 // call createThumb function and pass to it as parameters the path

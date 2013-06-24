@@ -1,11 +1,11 @@
 <?php
 /**
- * Classe Paragrafo 
+ * Class Paragraph
  * 
- * @subpackage compositePattern
- * @version 0.2
+ * @author Maurizio Brioschi (maurizio.brioschi@ridesoft.org) 
+ * @version 0.1 
  */
-class Paragrafo extends Composite {
+class Paragraph extends Composite {
     protected $attr = array();
     
     /**

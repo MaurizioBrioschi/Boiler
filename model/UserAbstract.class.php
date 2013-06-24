@@ -1,9 +1,10 @@
 <?php
 
 /***
- * Classe UserAbstract per gli utenti
+ * Class UserAbstract for users
  * 
- * @version 1.0
+ * @author Maurizio Brioschi (maurizio.brioschi@ridesoft.org) 
+ * @version 0.1 
  */
 abstract class UserAbstract {
     protected $attr = array();

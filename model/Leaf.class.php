@@ -1,9 +1,8 @@
 <?php
 /**
- * Classe per un componente foglia del pattern Composite
- * 
- * @subpackage compositePattern
- * @version 0.2
+ * Class left for component
+ * @author Maurizio Brioschi (maurizio.brioschi@ridesoft.org) 
+ * @version 0.1 
  */
 class Leaf implements Component {
     protected $name;

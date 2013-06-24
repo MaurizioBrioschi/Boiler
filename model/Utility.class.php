@@ -1,7 +1,8 @@
 <?php
 /**
- * Classe contenente alcune utility
- * @version 1.0
+ * Some static utility
+ * @author Maurizio Brioschi (maurizio.brioschi@ridesoft.org) 
+ * @version 0.1 
  */
   class Utility {
       /**

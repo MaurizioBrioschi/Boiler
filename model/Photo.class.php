@@ -1,9 +1,8 @@
 <?php
 /**
- * Classe photo
- * 
- * @subpackage compositePattern
- * @version 0.2
+ * Class photo
+ * @author Maurizio Brioschi (maurizio.brioschi@ridesoft.org) 
+ * @version 0.1 
  */
 class Photo extends Component {
     protected $attr = array();

@@ -1,8 +1,9 @@
 <?php
 /**
- * Classe per autenticazione degli utenti sul front end
- * @todo serializzare l'oggetto
- * @version 1.0
+ * Classe per authentication
+ * @todo serialize
+ * @author Maurizio Brioschi (maurizio.brioschi@ridesoft.org) 
+ * @version 0.1 
  */
 class UserAuthentication {
     var $errorCode = "AUTH_NONE";

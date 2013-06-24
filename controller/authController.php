@@ -1,7 +1,8 @@
 <?php
 /**
- * controller per l'autenticazione dell'utente
- * @version 1.0
+ * Class for authentication
+ * @author Maurizio Brioschi (maurizio.brioschi@ridesoft.org) 
+ * @version 0.1 
  */
 Class authController Extends baseController {
 

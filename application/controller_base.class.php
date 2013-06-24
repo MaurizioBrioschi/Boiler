@@ -1,9 +1,9 @@
 <?php
 /**
- * Classe astratta del controller base 
- * Ogni classe che implementa questa classe deve stare nella cartella controller
- * Parte del Controller MVC
- * @version 0.2
+ * Base class for a controller
+ * MUST stay in controller directory
+ * @author Maurizio Brioschi (maurizio.brioschi@ridesoft.org) 
+ * @version 0.1 
  */
 Abstract Class baseController {
 
@@ -20,9 +20,7 @@ function __construct(Registry $registry) {
 	$this->registry = $registry;
 }
 
-/**
- * tutti i controller devono avere un metodo index
- */
+
 abstract function index();
 }
 

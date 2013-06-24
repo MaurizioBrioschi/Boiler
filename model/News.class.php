@@ -1,9 +1,8 @@
 <?php
 /**
- * Classe News 
- * 
- * @subpackage compositePattern
- * @version 0.2
+ * Class for news
+ * @author Maurizio Brioschi (maurizio.brioschi@ridesoft.org) 
+ * @version 0.1 
  */
 class News extends Composite {
     protected $attr = array(); //attributi della news

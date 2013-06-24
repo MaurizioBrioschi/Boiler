@@ -1,8 +1,9 @@
 <?php
 /**
- * classe dei servizi associati all'utente
- * @todo da serializzare
- * @version 0.2
+ * class for manager service admin 
+ * @todo serialize
+ * @author Maurizio Brioschi (maurizio.brioschi@ridesoft.org) 
+ * @version 0.1 
  */
 class ManagerService{
     private $IDService,$IDSection;

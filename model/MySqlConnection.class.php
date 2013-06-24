@@ -1,9 +1,8 @@
 <?php
  /**
- * Gestisce la connessione MySql
- * 
- * @subpackage model
- * @version 0.2
+ * Class for manage mysql connection
+ * @author Maurizio Brioschi (maurizio.brioschi@ridesoft.org) 
+ * @version 0.1 
  */
  class MySqlConnection{
         

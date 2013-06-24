@@ -1,11 +1,10 @@
 <?php
 /**
- * Classe Pagina 
- * 
- * @subpackage compositePattern
- * @version 0.2
+ * Class Page
+ * @author Maurizio Brioschi (maurizio.brioschi@ridesoft.org) 
+ * @version 0.1 
  */
-class Pagina extends Composite {
+class Page extends Composite {
     protected $attr = array(); //attributi della pagina
     protected $objs = array(); //elementi che costituiscono la pagina
     /**
