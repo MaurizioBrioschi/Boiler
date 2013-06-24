@@ -1,7 +1,6 @@
 <?php
 /**
- * controller for index page
- * @version 0.2
+ * @author Maurizio Brioschi (maurizio.brioschi@ridesoft.org) 
  */
 Class indexController Extends baseController {
 
@@ -15,7 +14,13 @@ public function index() {
             
             
             $this->registry->template->show('index');
+            
        // }
+}
+
+public function ciao($args=null)    {
+    $this->registry->template->args=$args;
+    $this->registry->template->show('index');
 }
 
 }
