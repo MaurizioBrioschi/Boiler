@@ -12,7 +12,7 @@ public function index() {
 
 public function hello($args=null)    {
     $this->registry->template->args=$args;
-    $this->registry->template->show('index');
+    $this->registry->template->show('index'); 
 }
 
 }

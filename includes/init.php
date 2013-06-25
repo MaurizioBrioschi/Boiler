@@ -1,8 +1,12 @@
 <?php
  /**
-  * init file per la configurazione di tutti i parametri globali
-  * @version 1.0
-  */
+  * init file to configure web application parameters
+  * @author Maurizio Brioschi (maurizio.brioschi@ridesoft.org) 
+ * @version 0.1 
+  * (c) Maurizio Brioschi (maurizio.brioschi@ridesoft.org) 
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
  include 'conf.php';
  /*** include the controller class ***/
  include __SITE_PATH . '/application/' . 'controller_base.class.php';
@@ -54,13 +58,15 @@
  
  
  /** varibili conf */
- $registry->titleApplication = "Boiler"; //nome dell'applicazione
- $registry->logo = $registry->UrlSite.$registry->imgs."logo.gif"; // nome del file del logo
- $registry->gallery_thumb = "200";//dimensione della thumb per le foto della gallery
- $registry->gallery_picture = "400"; //ridimensionamento delle foto della gallery
+ $registry->titleApplication = "Boiler"; //application name
+ $registry->logo = $registry->UrlSite.$registry->imgs."logo.gif"; //file logo
+ $registry->gallery_thumb = "200";//thumb dimension
+ 
  
  @session_start();
- 
+ /**
+  * if you have a part of the web application protected
+  */
  if(!empty($_SESSION['contextUser'])){
           $registry->AdminUser = unserialize($_SESSION['contextUser']);
   }
