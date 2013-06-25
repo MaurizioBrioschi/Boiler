@@ -5,7 +5,9 @@ Boiler is MVC php framework, useful to simply develop frontend and backend web a
 
 Installation
 =======
-Just download this .zip file anche unzip it in your root directory web site
+ * Just download this .zip file anche unzip it in your root directory web site
+ * With git from command line type and it will be download in the current directory: git clone https://github.com/ridesoft/Boiler 
+
 
 MVC
 =======
