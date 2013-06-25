@@ -24,10 +24,19 @@ Create a new page is pretty easy:
       Now the url http://yoursite.com/about will call your aboutController class and the method index
     * If you want to call another method from your aboutController just insert a new method inside like for example "rock" 
       If you do this the url http://yoursite.com/about/rock will call this method.
-      N.B. index method of every controller can't have arguments
     * Everythings came after the second slash (in this case rock) will be considered like argument of the method
-    
-This is the code exaple:
+      N.B. index method of every controller is the only method that can't have arguments
+    * The code will be rendered in its template by the method show:
+      ```php
+
+      $this->registry->template->show 
+
+      ```
+      
+      That call the template php with that name in views directory.
+
+This is the complete code exaple:
+
 ```php
 Class aboutController Extends baseController {
 
