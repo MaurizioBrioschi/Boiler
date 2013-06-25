@@ -149,23 +149,7 @@
             
             
         }
-        /**
-         * Log Error segnala un errore nella tabella degli errori su db, dove è presente una tabella con questi campi
-         * @param string $Funzione
-         * @param string $MessaggioErrore
-         * @param string $StackTrace
-         * @param string $Info1
-         * @param string $Info2
-         * @param int $Gravita
-         * @param string $Applicazione 
-         */
-        public function LogError($Funzione,$MessaggioErrore,$StackTrace,$Info1,$Info2,$Gravita,$Applicazione)  {
-            $Sql = "INSERT INTO tblerrori(DataOra,Funzione,MessaggioErrore,StackTrace,Info1,Info2,Gravita,Applicazione) VALUES(NOW(),";
-            $Sql .= "'".$this->cleanField($Funzione)."','".$this->cleanField($MessaggioErrore)."','".$this->cleanField($StackTrace)."','".$this->cleanField($Info1)."','".$this->cleanField($Info2)."','".$this->cleanField($Gravita)."','".$this->cleanField($Applicazione)."');";
-            
-            
-            $result = mysql_query($Sql) or die("<p>\n\nImpossible to execute statemant: " . mysql_error() . "</p>");
-        }
+        
         
         
 }//SqlConnectionClass

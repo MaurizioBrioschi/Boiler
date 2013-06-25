@@ -36,9 +36,9 @@
 
 /*** a new registry object ***/
  $registry = new registry;
-
- $conn = new MySqlConnection($SERVER,$USER,$PWD,$DATABASE);
- $registry->MySqlConnection = $conn;
+// this how to create a db connection... if you don't want it all pages, just call this where is needed
+// $conn = new MySqlConnection($SERVER,$USER,$PWD,$DATABASE);
+// $registry->repository = new DBRepository($conn);
  
  
 
