@@ -19,19 +19,21 @@ Using Boiler
 =======
 After have unziped the package in your root directory you have a mvc framework ready to create some pages.
 Create a new page is pretty easy:
-    * Copy and paste indexController.php in controller directory and name like the page you want call.
+
+ * Copy and paste indexController.php in controller directory and name like the page you want call.
       es. if you want to have a page about create the controller aboutController.php and change the class name from to indexController to aboutController
       Now the url http://yoursite.com/about will call your aboutController class and the method index
-    * If you want to call another method from your aboutController just insert a new method inside like for example "rock" 
+ * If you want to call another method from your aboutController just insert a new method inside like for example "rock" 
       If you do this the url http://yoursite.com/about/rock will call this method.
-    * Everythings came after the second slash (in this case rock) will be considered like argument of the method
+ * Everythings came after the second slash (in this case rock) will be considered like argument of the method
       N.B. index method of every controller is the only method that can't have arguments
-    * The code will be rendered in its template by the method show:
-      ```php
+ * The code will be rendered in its template by the method show:
+
+ ```php
 
       $this->registry->template->show 
 
-      ```
+  ```
       
       That call the template php with that name in views directory.
 
