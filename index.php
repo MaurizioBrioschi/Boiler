@@ -25,7 +25,7 @@
  $registry->router = new router($registry);
 
  /*** set the controller path ***/
- $registry->router->setPath (__SITE_PATH . '/controller');
+ $registry->router->setPath (__SITE_PATH . '/controller/');
 
  /*** load up the template ***/
  $registry->template = new template($registry);

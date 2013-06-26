@@ -39,7 +39,7 @@ class router {
 	{
 		throw new Exception ("Invalid controller path: '" . $path . "'");
 	}
- 	$this->path = $path;
+ 	$this->path = substr($path,0,-1);
 }
 
 
@@ -63,6 +63,7 @@ class router {
 	include $this->file;
 
 	
+        $this->controller = str_replace("cms/controller/", "", $this->controller);
 	$class = $this->controller . 'Controller';
 	$controller = new $class($this->registry);
 
@@ -101,27 +102,39 @@ class router {
   * if i have no method it calls the method index in the controller
   * if i have no controller it calls indexController, indexMethod
   * if there is an error in the url, call the error404Controller.php, index method to show page 404.
-  * 
+  * @todo in cms directory the indexController can't have an alternative method (is only a page), if set it don't work... is not a real bug but it will be better to have
  * @return void
  */
 private function getController() {
 
 	
 	$route = (empty($_GET['rt'])) ? '' : $_GET['rt'];
+        
+        $this->controller = "";
+       
+        if(stripos($route,"cms")!==false)   {
+                $this->controller = "cms/controller/";
+                $this->path = str_replace("controller", "", $this->path);
+               
+        }
+        
+        $route = str_replace("cms/", "", $route);
         $parts = explode('/', $route);
         
-	if (empty($parts))
+        
+	if (empty($parts)||$parts[0]=='')
 	{
-		$this->controller='index';
+		$this->controller .='index';
                 
 	}
 	else
 	{
-		if($parts[0]=='home') $this->controller='index';
+		if($parts[0]=='home') $this->controller .='index';
 		else if($parts[0]=='')
-                    $this->controller = 'index';
-                else
-                    $this->controller = $parts[0];
+                    $this->controller .= 'index';
+                else 
+                    $this->controller .= $parts[0];
+                
                 if(count($parts)>1){
 		if(isset($parts[1]))
                     {
@@ -140,8 +153,9 @@ private function getController() {
 	{
 		$this->action = 'index';
 	}
-
-	$this->file = $this->path .'/'. $this->controller . 'Controller.php';
+        
+        
+	$this->file = $this->path . $this->controller . 'Controller.php';
 
 }
 
