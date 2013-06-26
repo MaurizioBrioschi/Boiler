@@ -7,6 +7,9 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code. 
  */
+
+namespace ridesoft\Boiler\model;
+
 class Page extends Composite {
     protected $attr = array(); //attributi della pagina
     protected $objs = array(); //elementi che costituiscono la pagina

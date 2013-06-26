@@ -7,6 +7,9 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code. 
  */
+
+namespace ridesoft\Boiler\model;
+
 class PhotoUtility{
 // call createThumb function and pass to it as parameters the path
 // to the directory that contains images, the path to the directory

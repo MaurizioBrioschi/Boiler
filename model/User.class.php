@@ -8,6 +8,9 @@
  * file that was distributed with this source code.
  * 
  */
+
+namespace ridesoft\Boiler\model;
+
 class User extends UserAbstract{
     protected $whishlist;
     protected $isLogged = false;

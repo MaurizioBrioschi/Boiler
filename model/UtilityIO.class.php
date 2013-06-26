@@ -9,6 +9,9 @@
  * file that was distributed with this source code.
  * 
  */
+
+namespace ridesoft\Boiler\model;
+
 class UtilityIO {
     /**
      * remove directory content and directory if $removeDir is true
