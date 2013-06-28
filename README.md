@@ -3,6 +3,7 @@ Boiler
 
 Boiler is MVC php framework, useful to simply develop frontend and backend web application.
 Boiler works with php 5.3+
+N.B. This master version doesn't work, it's under revision... download the tag 0.1
 
 Installation
 =======
