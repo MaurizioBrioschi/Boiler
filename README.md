@@ -2,6 +2,7 @@ Boiler
 ======
 
 Boiler is MVC php framework, useful to simply develop frontend and backend web application.
+Boiler works with php 5.3+
 
 Installation
 =======
