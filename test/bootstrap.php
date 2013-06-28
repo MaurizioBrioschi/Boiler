@@ -28,6 +28,11 @@ include  '../application/' . 'router.class.php';
 /*** include the template class ***/
 include  '../application/' . 'template.class.php';
  
+include 'CsvFileInterator.php';
+
+$site_path = realpath(dirname(__FILE__));
+
+define ('__SITE_PATH', $site_path."/../");
  
 function __autoload($class_name) {
     $file = "../model/".$class_name . '.class.php';

@@ -17,39 +17,40 @@ class routerTest extends PHPUnit_Framework_TestCase {
     /**
      * Sets up the fixture, for example, opens a network connection.
      * This method is called before a test is executed.
+     * @group annotation
      */
     protected function setUp() {
         $this->object = new router(new \ridesoft\Boiler\application\Registry);
+        $this->assertInstanceOf('ridesoft\Boiler\application\router', $this->object);
+        $this->assertObjectHasAttribute("registry", $this->object);
+        $this->assertObjectHasAttribute("path", $this->object);
+        $this->assertObjectHasAttribute("args", $this->object);
+        $this->assertObjectHasAttribute("file", $this->object);
+        $this->assertObjectHasAttribute("controller", $this->object);
+        $this->assertObjectHasAttribute("action", $this->object);
+       
     }
 
-    /**
-     * Tears down the fixture, for example, closes a network connection.
-     * This method is called after a test is executed.
-     */
-    protected function tearDown() {
-        
-    }
-
-    /**
-     * @covers router::setPath
-     * @todo   Implement testSetPath().
-     */
-    public function testSetPath() {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-                'This test has not been implemented yet.'
-        );
-    }
 
     /**
      * @covers router::loader
-     * @todo   Implement testLoader().
+     * @dataProvider provider
+     * @group annotation
      */
-    public function testLoader() {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-                'This test has not been implemented yet.'
-        );
+    public function testLoader($route,$expectedFile,$expectedController,$expectedAction) {
+        $this->object->setPath(__SITE_PATH . '/controller/');
+        $_GET = $route;
+        $this->object->loader();
+        $this->assertEquals($this->object->controller,$expectedController);
+        $this->assertEquals($this->object->file,$expectedFile);
+        $this->assertEquals($this->object->action,$expectedAction);
+    }
+    
+    public function provider() {
+        return array(
+            array("index.php", __SITE_PATH ."/controller/indexController.php","index","index"),
+            array("index.php?rt=home",__SITE_PATH ."/controller/indexController.php","index","index")
+            );
     }
 
 }

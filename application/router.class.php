@@ -9,6 +9,7 @@
  */
 namespace ridesoft\Boiler\application;
 
+ 
 class router {
 
  private $registry;
@@ -39,7 +40,7 @@ class router {
 	//controlla se $path è una directory
 	if (is_dir($path) == false)
 	{
-		throw new Exception ("Invalid controller path: '" . $path . "'");
+		throw new \Exception ("Invalid controller path: '" . $path . "'");
 	}
  	$this->path = substr($path,0,-1);
 }
