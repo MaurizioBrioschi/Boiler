@@ -2,7 +2,11 @@
 /**
  * @author Maurizio Brioschi (maurizio.brioschi@ridesoft.org) 
  */
-Class indexController Extends baseController {
+namespace ridesoft\Boiler\controller;
+
+use ridesoft\Boiler\application\baseController;
+
+class indexController Extends baseController {
 
 public function index() {
     
@@ -10,10 +14,7 @@ public function index() {
 
 }
 
-public function hello($args=null)    {
-    $this->registry->template->args=$args;
-    $this->registry->template->show('index'); 
-}
+
 
 }
 

@@ -2,7 +2,7 @@
  /**
  * Class repository for db query base, extending this class is the base for your repository
  * @author Maurizio Brioschi (maurizio.brioschi@ridesoft.org) 
- * @version 0.1 
+ * @version 0.2 
   * (c) Maurizio Brioschi (maurizio.brioschi@ridesoft.org) 
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.

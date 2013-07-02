@@ -2,7 +2,7 @@
 /**
  * Class router to analyze url and get the right controller with parameters
  *  @author Maurizio Brioschi (maurizio.brioschi@ridesoft.org) 
- * @version 0.1 
+ * @version 0.2 
   * (c) Maurizio Brioschi (maurizio.brioschi@ridesoft.org) 
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -27,6 +27,7 @@ class router {
  
  function __construct(Registry $registry) {
         $this->registry = $registry;
+        $this->setPath($this->registry->path);
  }
 
  /**
@@ -42,7 +43,7 @@ class router {
 	{
 		throw new \Exception ("Invalid controller path: '" . $path . "'");
 	}
- 	$this->path = substr($path,0,-1);
+ 	$this->path = $path;
 }
 
 
@@ -55,20 +56,8 @@ class router {
 	
 	$this->getController();
 	
-        //se non esite il file del controller chiamo automaticamente la pagina 404
-	if (is_readable($this->file) == false)
-	{
-		$this->file = $this->path.'/error404Controller.php';
-                $this->controller = 'error404';
-	}
-
-	
-	include $this->file;
-
-	
-        $this->controller = str_replace("cms/controller/", "", $this->controller);
-	$class = $this->controller . 'Controller';
-	$controller = new $class($this->registry);
+        
+	$controller = new $this->controller($this->registry);
 
 	//if the method is not callable i call the index 
 	if (is_callable(array($controller, $this->action)) == false)
@@ -116,9 +105,12 @@ private function getController() {
         $this->controller = "";
        
         if(stripos($route,"cms")!==false)   {
-                $this->controller = "cms/controller/";
+                $this->controller = "ridesoft\\Boiler\\cms\\controller\\";
                 $this->path = str_replace("controller", "", $this->path);
                
+        }else {
+            $this->controller = "ridesoft\\Boiler\\controller\\";
+            $this->path = str_replace("controller", "", $this->path);
         }
         
         $route = str_replace("cms/", "", $route);
@@ -157,8 +149,8 @@ private function getController() {
 		$this->action = 'index';
 	}
         
-        
-	$this->file = $this->path . $this->controller . 'Controller.php';
+        $this->controller .= "Controller";
+	$this->file = $this->path . $this->controller . 'Controller';
 
 }
 
