@@ -3,6 +3,11 @@
  * error 404 page controller
  * @author Maurizio Brioschi (maurizio.brioschi@ridesoft.org) 
  */
+
+namespace ridesoft\Boiler\cms\controller;
+
+use ridesoft\Boiler\application\baseController;
+
 Class error404Controller Extends baseController {
 
 public function index() 

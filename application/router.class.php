@@ -58,7 +58,7 @@ class router {
 	
         
 	$controller = new $this->controller($this->registry);
-
+       
 	//if the method is not callable i call the index 
 	if (is_callable(array($controller, $this->action)) == false)
 	{

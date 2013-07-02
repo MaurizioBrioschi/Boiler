@@ -4,6 +4,10 @@
  * @author Maurizio Brioschi (maurizio.brioschi@ridesoft.org) 
  * * (c) Maurizio Brioschi (maurizio.brioschi@ridesoft.org)   * For the full copyright and license information, please view the LICENSE  * file that was distributed with this source code. 
  */
+
+namespace ridesoft\Boiler\cms\controller;
+
+use ridesoft\Boiler\application\baseController;
 Class authController Extends baseController {
 
 public function index() {
