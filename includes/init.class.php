@@ -76,11 +76,11 @@ class init {
             return $this;
         }
         /**
-        * non permette la clonazione della connessione
+        * to not clone the object
         */
         public function __clone()
         {
-            echo 'connection already exist!';
+            
             trigger_error('Clone is not allowed.', E_USER_ERROR);
         }
  
