@@ -10,11 +10,7 @@
  */
 
  /*** error reporting on ***/
- 
-
- 
- 
- 
+ error_reporting(E_ALL);
  /*** define the site path ***/
  $site_path = realpath(dirname(__FILE__))."/";
  define ('__SITE_PATH', $site_path);
@@ -40,7 +36,7 @@
     }
  }
 
-
+ /** start boiler */
  $init = \ridesoft\Boiler\includes\init::start($site_path);
  
  
