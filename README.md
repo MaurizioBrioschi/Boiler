@@ -14,6 +14,7 @@ Note
 
 This is my personal framework, used for years to develop web application and now is time to make it useful form everybody.
 Probably is to fix, explain and to make more easy... 
+More information are in the wiki section
 
 License
 =======
