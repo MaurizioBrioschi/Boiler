@@ -58,6 +58,31 @@ class init {
    public function loader(){
        $this->registry->router->loader();
    }
+       /**
+       * sleep method for serialize object
+      * @return serialize array
+       */
+        public function __sleep()
+        {
+            return array($this->registry);
+        }
+        /**
+        * wakeup method for serialize object
+        * @return init
+        */
+        public function __wakeup()
+        {
+            
+            return $this;
+        }
+        /**
+        * non permette la clonazione della connessione
+        */
+        public function __clone()
+        {
+            echo 'connection already exist!';
+            trigger_error('Clone is not allowed.', E_USER_ERROR);
+        }
  
  
 }
