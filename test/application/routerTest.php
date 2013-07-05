@@ -6,26 +6,31 @@
 use ridesoft\Boiler\application\router;
 
 class routerTest extends PHPUnit_Framework_TestCase {
-
+    private $path='/var/www/Boiler/';
     /**
      * @var router
      */
     protected $object;
-
+    public static function setUpBeforeClass()
+    {
+        self::$registry = new \ridesoft\Boiler\application\Registry;
+        self::$registry->path=  $this->path;
+    }
+ 
+    public static function tearDownAfterClass()
+    {
+        self::$registry = NULL;
+    }
     /**
      * Sets up the fixture, for example, opens a network connection.
      * This method is called before a test is executed.
      * @group annotation
      */
     protected function setUp() {
-        $this->object = new router(new \ridesoft\Boiler\application\Registry);
+        ;
+        $this->object = new router(self::$registry);
         $this->assertInstanceOf('ridesoft\Boiler\application\router', $this->object);
-        $this->assertObjectHasAttribute("registry", $this->object);
-        $this->assertObjectHasAttribute("path", $this->object);
-        $this->assertObjectHasAttribute("args", $this->object);
-        $this->assertObjectHasAttribute("file", $this->object);
-        $this->assertObjectHasAttribute("controller", $this->object);
-        $this->assertObjectHasAttribute("action", $this->object);
+        
     }
 
     /**
@@ -34,7 +39,7 @@ class routerTest extends PHPUnit_Framework_TestCase {
      * @group annotation
      */
     public function testLoader($route, $expectedFile, $expectedController, $expectedAction) {
-        $this->object->setPath(__SITE_PATH . '/controller/');
+        $this->object->setPath($this->path.'controller/');
         $_GET = $route;
         $this->object->loader();
         $this->assertEquals($this->object->controller, $expectedController);
@@ -44,8 +49,8 @@ class routerTest extends PHPUnit_Framework_TestCase {
 
     public function provider() {
         return array(
-            array("index.php", __SITE_PATH . "/controller/indexController.php", "index", "index"),
-            array("index.php?rt=home", __SITE_PATH . "/controller/indexController.php", "index", "index")
+            array("", "http://localhost/Boiler/controller/indexController.php", "index", "index"),
+            array("cms", "http://localhost/Boiler/cms/controller/indexController.php", "index", "index")
         );
     }
 
