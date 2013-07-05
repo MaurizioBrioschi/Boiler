@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @author Maurizio Brioschi (maurizio.brioschi@ridesoft.org) 
  */
@@ -9,13 +10,10 @@ use ridesoft\Boiler\application\baseController;
 
 Class indexController Extends baseController {
 
-public function index() {
-    
-            $this->registry->template->show('cms/index');
+    public function index() {
 
-}
-
-
+        $this->registry->template->show('cms/index');
+    }
 
 }
 

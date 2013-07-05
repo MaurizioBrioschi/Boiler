@@ -5,9 +5,9 @@
          convertNoticesToExceptions="true"
          convertWarningsToExceptions="true"
          stopOnFailure="true">
-         <groups>
-            <include>
-              <group>application</group>
-            </include>
-          </groups>
+    <groups>
+        <include>
+            <group>application</group>
+        </include>
+    </groups>
 </phpunit>

@@ -1,7 +1,6 @@
 index
 <?php
-foreach($args as $arg){
-    echo $arg."<br />";
+foreach ($args as $arg) {
+    echo $arg . "<br />";
 }
-
 ?>
