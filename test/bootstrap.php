@@ -17,7 +17,7 @@
  /*** define the site path ***/
 
 /*** include the controller class ***/
-include '../application/' . 'controller_base.class.php';
+include '../application/' . 'baseController.class.php';
 
 /*** include the registry class ***/
 include '../application/' . 'registry.class.php';
