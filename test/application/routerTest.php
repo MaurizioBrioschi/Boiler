@@ -11,24 +11,18 @@ class routerTest extends PHPUnit_Framework_TestCase {
      * @var router
      */
     protected $object;
-    public static function setUpBeforeClass()
-    {
-        self::$registry = new \ridesoft\Boiler\application\Registry;
-        self::$registry->path=  $this->path;
-    }
+    
  
-    public static function tearDownAfterClass()
-    {
-        self::$registry = NULL;
-    }
-    /**
-     * Sets up the fixture, for example, opens a network connection.
+    
+     /** Sets up the fixture, for example, opens a network connection.
      * This method is called before a test is executed.
      * @group annotation
      */
     protected function setUp() {
-        ;
-        $this->object = new router(self::$registry);
+        $registry = new ridesoft\Boiler\application\registry;
+        $this->assertInstanceOf('ridesoft\Boiler\application\registry', $registry);
+        $registry->path=$this->path;
+        $this->object = new router($registry);
         $this->assertInstanceOf('ridesoft\Boiler\application\router', $this->object);
         
     }
@@ -49,8 +43,8 @@ class routerTest extends PHPUnit_Framework_TestCase {
 
     public function provider() {
         return array(
-            array("", "http://localhost/Boiler/controller/indexController.php", "index", "index"),
-            array("cms", "http://localhost/Boiler/cms/controller/indexController.php", "index", "index")
+            //array("", "http://localhost/Boiler/controller/indexController.php", "index", "index"),
+            //array("cms", "http://localhost/Boiler/cms/controller/indexController.php", "index", "index")
         );
     }
 
