@@ -6,25 +6,24 @@
 use ridesoft\Boiler\application\router;
 
 class routerTest extends PHPUnit_Framework_TestCase {
-    private $path='/var/www/Boiler/';
+
+    private $path = '/var/www/Boiler/';
+
     /**
      * @var router
      */
     protected $object;
-    
- 
-    
-     /** Sets up the fixture, for example, opens a network connection.
+
+    /** Sets up the fixture, for example, opens a network connection.
      * This method is called before a test is executed.
      * @group annotation
      */
     protected function setUp() {
         $registry = new ridesoft\Boiler\application\registry;
         $this->assertInstanceOf('ridesoft\Boiler\application\registry', $registry);
-        $registry->path=$this->path;
+        $registry->path = $this->path;
         $this->object = new router($registry);
         $this->assertInstanceOf('ridesoft\Boiler\application\router', $this->object);
-        
     }
 
     /**
@@ -33,8 +32,8 @@ class routerTest extends PHPUnit_Framework_TestCase {
      * @group annotation
      */
     public function testLoader($route, $expectedFile, $expectedController, $expectedAction) {
-        $this->object->setPath($this->path.'controller/');
-        $_GET = $route;
+        $this->object->setPath($this->path . 'controller/');
+
         $this->object->loader();
         $this->assertEquals($this->object->controller, $expectedController);
         $this->assertEquals($this->object->file, $expectedFile);
@@ -43,8 +42,9 @@ class routerTest extends PHPUnit_Framework_TestCase {
 
     public function provider() {
         return array(
-            //array("", "http://localhost/Boiler/controller/indexController.php", "index", "index"),
-            //array("cms", "http://localhost/Boiler/cms/controller/indexController.php", "index", "index")
+            array("", "http://localhost/Boiler/controller/indexController.php", "index", "index"),
+            array("cms", "http://localhost/Boiler/cms/controller/indexController.php", "index", "index"),
+                //array("abacd", "http://localhost/Boiler/cms/controller/error404Controller.php", "error404", "index")
         );
     }
 
