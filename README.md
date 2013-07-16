@@ -6,7 +6,7 @@ Very light, very easy to install and learn: **the only thing you must know is ho
 
 Installation
 =======
- * Just download this .zip file and unzip it in your root directory web site
+ * Just download last released file .zip, here in github (so you are sure it's work, master realease is always under pressure) file and unzip it in your root directory web site
  * With git from command line type and it will be download in the current directory: git clone https://github.com/ridesoft/Boiler 
 
 Note
