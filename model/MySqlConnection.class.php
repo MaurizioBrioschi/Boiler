@@ -15,7 +15,7 @@ class MySqlConnection {
 
     protected $link;
     private $server, $username, $password, $db;
-    protected static $myConnection;
+    private static $myConnection;
 
     /**
      * 
@@ -24,7 +24,7 @@ class MySqlConnection {
      * @param string $password
      * @param string $db 
      */
-    public function __construct($server, $username, $password, $db) {
+    private function __construct($server, $username, $password, $db) {
         $this->server = $server;
         $this->username = $username;
         $this->password = $password;
