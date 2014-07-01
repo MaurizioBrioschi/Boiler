@@ -16,8 +16,4 @@ This is my personal framework, used for years to develop web application and now
 Probably is to fix, explain and to make more easy... 
 More information are in the wiki section
 
-License
-=======
-
-This code is under MIT license present in the root directory
 
