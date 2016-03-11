@@ -12,8 +12,8 @@ Installation
 Note
 =======
 
-This is my personal framework, used for years to develop web application and now is time to make it useful form everybody.
+This is my personal framework, used for years (2006-2010) to develop web applications and now is time to make it public.
 Probably is to fix, explain and to make more easy... 
-More information are in the wiki section
+But it's an exemple of an MVC basic framework.
 
 
